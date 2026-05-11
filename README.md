@@ -1,17 +1,10 @@
 ````
-# CLIP-Mamba
-Codes for ***CNN-MAMBA NETWORK WITH CLIP-BASED SEMANTIC ALIGNMENT FOR ANATOMICAL AND FUNCTIONAL IMAGE FUSION***
+# BCFusion
+Codes for ***BCFusion: A BiomedCLIP Semantic-Guided Mamba Enhanced Network for Multi-modal Medical Image Fusion***
 
 ## Abstract
-
-The fusion of anatomical and functional images is critical for accurate medical diagnosis. However, existing deep 
-learning methods often struggle to preserve fine anatomical details,capture global dependencies, and incorporate effective semantic constraints. To address these limitations, we propose
-CLIP-Mamba, a novel framework integrating three key components: (1) the Differential-Partial Focus Module (DPFM) for extracting critical local structural and functional features;(2) the Detail-Enhanced Mamba Module (DEMM) for modeling long-range dependencies and enhancing global representations;
-and (3) the Spatial-Channel Reconstruction Module (SCRM) for suppressing redundancy and reconstructing complementary features. Additionally, we introduce CLIP-based
-semantic alignment to enforce consistency between structural and functional semantics. Experiments on MRI-SPECT datasets demonstrate that CLIP-Mamba preserves anatomical
-boundaries and highlights functional signals, achieving superior semantic consistency and detail representation. T
+Multimodal Medical Image Fusion (MMIF) aims to synthesize complementary information from diverse imaging modalities into a unified representation, facilitating clinical auxiliary analysis. While deep learning-based approaches have shown promise, they are primarily constrained by three fundamental limitations : (1) fixed-scale convolutions lack the adaptability required to handle the complex anatomical morphologies of medical images; (2) the prevalent reliance on deep-stacked architectures leads to the indiscriminate propagation of local details and global context, compromising both feature discriminability and computational efficiency ; and (3) conventional pixel-level loss functions lack explicit guidance from high-level medical semantics, often resulting in critical lesion regions being obscured by irrelevant pixel intensities. To address these challenges, we propose BCFusion, a lightweight collaborative fusion network that synergizes CNN and Mamba with BiomedCLIP-based semantic guidance. Instead of exhaustive block stacking, BCFusion utilizes an Adaptive Feature Selection Module (AFSM) to dynamically calibrate the effective receptive field and compress redundant channels at an early stage. We further design a Redundancy-suppressed Mamba (R-Mamba) module, which balances local detail enhancement with long-range dependency modeling while utilizing spatial-channel reconstruction to filter non-discriminative features. Finally, a BiomedCLIP-guided semantic loss is introduced to enforce clinical meaningfulness via textual constraints. Extensive experiments demonstrate that BCFusion, with only 0.18M parameters, achieves state-of-the-art visual quality and quantitative performance across multiple datasets.
 ## Update
-- [2025/09] Release the code.
 
 ## Citation
 
